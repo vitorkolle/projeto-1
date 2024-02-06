@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de Tarefas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <script src="main.js" defer></script> 
 </head>
 <body>
     <header>
@@ -13,7 +16,7 @@
     </header>
 
     <main>
-        <h2 class="txt-cadastro">Cadastro:</h2>
+        <div class="background-lateral"></div>
 
         <div class="container-cadastro">
             <div class="nome">
@@ -31,13 +34,13 @@
                 <input type="text" id="input-senha">
             </div>
 
-        <a href="./home.html">
-            <button class="botao-cadastrar" id="botao-cadastrar">Cadastrar</button>
+            <div class="mensagem-login">
+            <p>Já possui uma conta?</p>
+        <a href="./login.html" class="link-login">
+            <p>Faça login</p>
         </a>
-
-        <a href="./login.html">
-            <p>Já é usuário? Faça login</p>
-        </a>
+            </div>
+            
 
         </div>
 

@@ -11,35 +11,59 @@ header{
     background-color: rgb(66, 170, 192);
     height: 10vh;
 }
+body{
+    background-image: linear-gradient(to bottom, rgb(245, 245, 245), rgb(73, 144, 72));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 h1{
     color: white;
 }
-
-h2{
-    margin-left: 8px;
-    margin-top: 48px;
-    font-size: 32px;
+.background-lateral{
+    background-image: url(./img/background\ lateral.png);
+    width: 35vw;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-
 .container-cadastro{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
-    align-items: center;
-    margin-top: 10vh;
+    align-items: end;
+    margin-right: 18vw;
+    margin-top: -60vh;
+    gap: 36px;
 }
 label{
-    font-size: 24px;
-    margin-right: 1vw;
+    font-size: 30px;
+    margin-right: 5px;
+    font-family: 'Inter', sans-serif;
+    color: white;
 }
-.botao-cadastrar{
-    margin-top: 2vh;
-    margin-left: -6vw;
+input{
+    border: none;
+    width: 500px;
+    height: 49px;
+    font-size: 30px;
 }
-.botao-logar{
-    margin-top: 2vh;
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+.mensagem-login{
+    display: flex;
+    margin-top: 10px;
+    gap: 5px;
+    color: black;
+    justify-content: center;
+    margin-right: 4.5vw;
 }
 p{
-    margin-left: 5vw;
-    margin-top: -2vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+.link-login{
+    font-family: 'Inter', sans-serif;
 }
