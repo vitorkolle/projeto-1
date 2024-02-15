@@ -54,11 +54,11 @@ input:focus {
 }
 .mensagem-login{
     display: flex;
-    margin-top: 10px;
+    margin-top: -8vh;
     gap: 5px;
     color: black;
     justify-content: center;
-    margin-right: 4.5vw;
+    margin-right: 8vw;
 }
 p{
     font-family: 'Inter', sans-serif;
