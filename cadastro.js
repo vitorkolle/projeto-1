@@ -24,14 +24,13 @@ catch(error){
 }
 }
 
-
 async function cadastrar(novoUsuario){
-    
+
     const url = 'http://localhost:5080/usuario'
     const options = {
         method: 'POST',
         headers: {
-            'Content-Type:' : 'application/json',
+            'Content-Type' : 'application/json'
         },
         body: JSON.stringify(novoUsuario)
     }
