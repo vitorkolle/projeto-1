@@ -23,9 +23,15 @@ async function criarCards(){
             </div>
             `
             containerTarefas.appendChild(cont)
+
             const btnEditar = document.getElementById('btn-editar' + tarefas[i].id)
             btnEditar.addEventListener('click', function(){
             pegarDadosCard()
+            })
+
+            const btnExcluir = document.getElementById('btn-excluir' + tarefas[i].id)
+            btnExcluir.addEventListener('click', function(){
+            excluirCard()
             })
         }  
 }
@@ -67,13 +73,12 @@ async function editarCard(novoCard){
    }
  }
 
-// async function excluirCard(){
-//     const 
-//     const url = `http://localhost:5080/tarefas${id}`
-//     const options = {
-//         method: 'DELETE',
-//     }
-//     const response = await fetch(url, options)
-// }
+async function excluirCard(id){
+     const url = `http://localhost:5080/tarefas${id}`
+     const options = {
+         method: 'DELETE',
+     }
+    const response = await fetch(url, options)
+}
 
 criarCards()
