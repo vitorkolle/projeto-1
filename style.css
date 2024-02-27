@@ -75,9 +75,11 @@ p{
 }
 .container-cards{
     display: flex;
+    flex-direction: column;
     gap: 15px;
     justify-content: center;
     margin-top: 20px;
+    margin-left: 40%;
 }
 .card{
     display: flex;
@@ -87,6 +89,7 @@ p{
     width: 40vh;
     height: 30vh;
     background-color: #EAE9DD;
+    border: #000000 solid 2px;
 }
 .rodape-card{
     display: flex;

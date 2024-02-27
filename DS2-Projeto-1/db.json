@@ -32,9 +32,8 @@
   "tarefas": [
     {
       "id": 1,
-      "descrição": "Limpar a Casa",
-      "dataConclusão": "31/01/2024",
-      "idUsuario": 1
+      "descrição": "Estudar",
+      "dataConclusão": "27/02/2024"
     },
     {
       "id": 2,
@@ -61,12 +60,12 @@
       "idUsuario": 3
     }
   ],
-    "comentarios": [
-        {
-            "id": 1,
-            "comentario": "Tarefa muito boa, parabéns",
-            "idTarefa": 2,
-            "idUsuario": 3
-        }
-    ]
+  "comentarios": [
+    {
+      "id": 1,
+      "comentario": "Tarefa muito boa, parabéns",
+      "idTarefa": 2,
+      "idUsuario": 3
+    }
+  ]
 }
