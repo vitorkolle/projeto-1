@@ -27,14 +27,15 @@
       "senha": "choso",
       "id": 4,
       "premium": false
+    },
+    {
+      "nome": "Vitor Paes Kolle",
+      "email": "vitorpaeskolle@gmail.com",
+      "senha": "Vitor0702@",
+      "id": 5
     }
   ],
   "tarefas": [
-    {
-      "id": 1,
-      "descrição": "Estudar",
-      "dataConclusão": "27/02/2024"
-    },
     {
       "id": 2,
       "descrição": "Aprender inglês",

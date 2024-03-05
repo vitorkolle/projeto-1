@@ -31,7 +31,8 @@ async function criarCards(){
 
             const btnExcluir = document.getElementById('btn-excluir' + tarefas[i].id)
             btnExcluir.addEventListener('click', function(){
-            excluirCard()
+            const idLocal = tarefas[i].id
+            excluirCard(idLocal)
             })
         }  
 }
@@ -74,11 +75,12 @@ async function editarCard(novoCard){
  }
 
 async function excluirCard(id){
-     const url = `http://localhost:5080/tarefas${id}`
+     const url = `http://localhost:5080/tarefas/${id}`
      const options = {
          method: 'DELETE',
      }
     const response = await fetch(url, options)
+    return response.ok
 }
 
 criarCards()
