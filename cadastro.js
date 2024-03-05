@@ -16,7 +16,7 @@ try{
             nome: nome,
             email: email,
             senha: senha,
-            premium: true            
+            premium: 1           
         }
         cadastrar(novoUsuario) 
     }
@@ -25,7 +25,7 @@ try{
             nome: nome,
             email: email,
             senha: senha,
-            premium: false           
+            premium: 0           
         }
         cadastrar(novoUsuario)
     }

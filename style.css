@@ -45,7 +45,7 @@ label{
 .label-premium{
     margin-right: -23.5vh;
 }
-input{
+.container-cadastro input{
     border: none;
     width: 500px;
     height: 49px;
@@ -85,11 +85,12 @@ p{
 }
 .container-cards{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
     justify-content: center;
     margin-top: 20px;
-    margin-left: 40%;
+    flex-wrap: wrap;
+
 }
 .card{
     display: flex;
@@ -123,7 +124,7 @@ p{
     cursor: pointer;
 }
 .checkbox{
-    width: 38px;
+    width: 48px;
 }
 .titulo{
     font-weight: bold;
@@ -135,4 +136,27 @@ p{
     margin-left: 10px;
     margin-top: 15vh;
     font-size: 20px;
+}
+.inativo{
+    opacity: 20%;
+}
+.img-comentarios{
+    margin-left: 15vh;    
+}
+.container-card{
+    position: absolute;
+    margin-left: 84vh;
+    margin-top: 10vh;
+}
+.container-card .card{
+    background-color: #EAE9DD;
+    border: 2px solid #000000;
+}
+.container-card .data{
+    margin-top: 20vh;
+}
+.container-comentarios{
+    width: 100vh;
+    height: fit-content;
+    background-color: aliceblue;
 }

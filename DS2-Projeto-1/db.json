@@ -5,34 +5,34 @@
       "nome": "João da Silva",
       "email": "joao@silva.com",
       "senha": "joao",
-      "premium": false
+      "premium": 0
     },
     {
       "id": 2,
       "nome": "Maria Salvagni",
       "email": "maria@salvagni.com",
       "senha": "maria",
-      "premium": true
+      "premium": 1
     },
     {
       "id": 3,
       "nome": "Gabriel Pereira",
       "email": "gabriel@pereira.com",
       "senha": "gabriel",
-      "premium": true
+      "premium": 1
     },
     {
       "nome": "nath",
       "email": "nath@kawakami.com",
       "senha": "choso",
       "id": 4,
-      "premium": false
+      "premium": 0
     },
     {
       "nome": "gabriel",
       "email": "gabriel@gabriel.com",
       "senha": "1234456",
-      "premium": true,
+      "premium": 1,
       "id": 5
     }
   ],
@@ -65,12 +65,6 @@
       "id": 6,
       "descrição": "correr",
       "dataConclusão": "01/11/2024"
-    },
-    {
-      "descrição": "aaaaaaaaaaa",
-      "dataConclusão": "12/07/2024",
-      "idUsuario": null,
-      "id": 7
     },
     {
       "descrição": "lutar",

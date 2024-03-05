@@ -1,6 +1,7 @@
 'use strict'
 
 const idUser = localStorage.getItem('idUsuario')
+const premiumUser = localStorage.getItem('premiumUsuario')
 async function criarCards(){
     const response = await fetch('http://localhost:5080/tarefas')
     const tarefas =  await response.json()
@@ -18,13 +19,21 @@ async function criarCards(){
             <img src="../img/image 2.png" id="btn-editar${tarefas[i].id}">
             <img src="../img/image 3.png" id="btn-excluir${tarefas[i].id}">
             <img src="../img/image 4.png" id="btn-criar${tarefas[i].id}">
+            <img src="../img/imagem-comentarios.png" id="btn-comentario${tarefas[i].id}" class="img-comentarios">
             </div>
-            <input type="checkbox"></input>
             </div>
             </div>
             `
             containerTarefas.appendChild(cont)
 
+            const btnComentario = document.getElementById('btn-comentario' + tarefas[i].id)
+            btnComentario.id = tarefas[i].id
+            btnComentario.addEventListener('click', function(){
+            localStorage.setItem('idCard', this.id)
+            window.location.href = '../comentarios/comentario.html'
+        })
+
+            if(premiumUser == 1 && idUser == tarefas[i].idUsuario){
             const btnEditar = document.getElementById('btn-editar' + tarefas[i].id)
             btnEditar.addEventListener('click', function(){
             pegarDadosCard()
@@ -40,8 +49,19 @@ async function criarCards(){
             btnCriar.addEventListener('click', function(){
                 criarCard()
             })
-        }  
-}
+        }else{
+            const btnEditar = document.getElementById('btn-editar' + tarefas[i].id)
+            btnEditar.classList.add('inativo')
+
+            const btnExcluir = document.getElementById('btn-excluir' + tarefas[i].id)
+            btnExcluir.classList.add('inativo')
+
+            const btnCriar = document.getElementById('btn-criar' + tarefas[i].id)
+            btnCriar.classList.add('inativo')
+            
+        }
+    }
+ }  
 
 function pegarDadosCard(){
     const id = prompt("Id da tarefa que deseja substituir:")
@@ -95,7 +115,7 @@ async function criarCard(){
     const novoCard = {
         "descrição": titulo,
         "dataConclusão": data,
-        "idUsuario": idUser
+        "idUsuario": id
     }
 
     const url = 'http://localhost:5080/tarefas'
@@ -111,4 +131,4 @@ async function criarCard(){
     return response.ok
 }
 
-criarCards()
+window.onload = criarCards()

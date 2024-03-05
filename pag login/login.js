@@ -20,6 +20,7 @@ async function validarLogin(){
             if(email === user.email && senha === user.senha){
                 alert('Usuário Logado com Sucesso !!');
                 localStorage.setItem('idUsuario', user.id)
+                localStorage.setItem('premiumUsuario', user.premium)
                 window.location.href = "../pag home/home.html"
                 return true;
             }
