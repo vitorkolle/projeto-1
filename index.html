@@ -18,21 +18,26 @@
 
     <main>
         <div class="background-lateral"></div>
-
+ 
         <div class="container-cadastro">
             <div class="nome">
                 <label>Nome:</label>
-                <input type="text" id="input-nome">
+                <input type="text" id="input-nome" placeholder="Seu Nome">
             </div>
 
             <div class="email">
                 <label>E-Mail:</label>
-                <input type="text" id="input-email">
+                <input type="text" id="input-email" placeholder="exemplo@gmail.com">
             </div>
 
             <div class="senha">
                 <label>Senha:</label>
-                <input type="password" id="input-senha">
+                <input type="password" id="input-senha" placeholder="**********">
+            </div>
+
+            <div class="premium">
+                <label class="label-premium">Premium:</label>
+                <input type="checkbox" id="input-premium" class="input-premium">
             </div>
 
             <button class="btn btn-info btn-lg" onclick="criarNovoUsuario()">Cadastrar</button>

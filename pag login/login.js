@@ -16,10 +16,10 @@ async function validarLogin(){
 
         const listUsers = await users.json();
         
-        console.log(listUsers)
         listUsers.forEach((user) => {
             if(email === user.email && senha === user.senha){
                 alert('Usuário Logado com Sucesso !!');
+                localStorage.setItem('idUsuario', user.id)
                 window.location.href = "../pag home/home.html"
                 return true;
             }

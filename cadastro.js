@@ -4,19 +4,34 @@ function criarNovoUsuario(){
 const nome = document.getElementById('input-nome').value
 const email = document.getElementById('input-email').value
 const senha = document.getElementById('input-senha').value
+const premium = document.getElementById('input-premium')
 
 if(nome === '' || senha === '' || email === ''){
     alert('Por favor, preencha todos os campos!!')
     return false;
 }
 try{
+    if(premium.checked){
         const novoUsuario = {
             nome: nome,
             email: email,
-            senha: senha 
+            senha: senha,
+            premium: true            
         }
-    
         cadastrar(novoUsuario) 
+    }
+    else{
+        const novoUsuario = {
+            nome: nome,
+            email: email,
+            senha: senha,
+            premium: false           
+        }
+        cadastrar(novoUsuario)
+    }
+    
+   
+        
 }
 catch(error){
     alert('Erro ao acessar a API !')
@@ -37,5 +52,6 @@ async function cadastrar(novoUsuario){
 
     const response = await fetch(url, options)
     console.log(response.ok)
+    window.location.href = './pag home/home.html'
     return response.ok
 }

@@ -1,5 +1,6 @@
 'use strict'
 
+const idUser = localStorage.getItem('idUsuario')
 async function criarCards(){
     const response = await fetch('http://localhost:5080/tarefas')
     const tarefas =  await response.json()
@@ -34,6 +35,11 @@ async function criarCards(){
             const idLocal = tarefas[i].id
             excluirCard(idLocal)
             })
+
+            const btnCriar = document.getElementById('btn-criar' + tarefas[i].id)
+            btnCriar.addEventListener('click', function(){
+                criarCard()
+            })
         }  
 }
 
@@ -55,8 +61,6 @@ async function editarCard(novoCard){
     const responseG = await fetch(url)
     const tarefas =  await responseG.json()
 
-    console.log(tarefas)
-    
     try {
     const options = {
         method: 'PUT',
@@ -80,6 +84,30 @@ async function excluirCard(id){
          method: 'DELETE',
      }
     const response = await fetch(url, options)
+    console.log(response.ok)
+    return response.ok
+}
+
+async function criarCard(){
+    const titulo = prompt("Titulo da Tarefa")
+    const data = prompt("Data da Tarefa")
+
+    const novoCard = {
+        "descrição": titulo,
+        "dataConclusão": data,
+        "idUsuario": idUser
+    }
+
+    const url = 'http://localhost:5080/tarefas'
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify(novoCard)
+    }
+    const response = await fetch(url, options)
+    console.log(response.ok)
     return response.ok
 }
 

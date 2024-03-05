@@ -29,9 +29,10 @@
       "premium": false
     },
     {
-      "nome": "Vitor Paes Kolle",
-      "email": "vitorpaeskolle@gmail.com",
-      "senha": "Vitor0702@",
+      "nome": "gabriel",
+      "email": "gabriel@gabriel.com",
+      "senha": "1234456",
+      "premium": true,
       "id": 5
     }
   ],
@@ -59,6 +60,23 @@
       "descrição": "Conhecer mais pessoas",
       "dataConclusão": "20/05/2024",
       "idUsuario": 3
+    },
+    {
+      "id": 6,
+      "descrição": "correr",
+      "dataConclusão": "01/11/2024"
+    },
+    {
+      "descrição": "aaaaaaaaaaa",
+      "dataConclusão": "12/07/2024",
+      "idUsuario": null,
+      "id": 7
+    },
+    {
+      "descrição": "lutar",
+      "dataConclusão": "04/02/2024",
+      "idUsuario": "1",
+      "id": 8
     }
   ],
   "comentarios": [

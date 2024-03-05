@@ -29,7 +29,7 @@ h1{
 }
 .container-cadastro{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: end;
     margin-right: 18vw;
@@ -42,6 +42,9 @@ label{
     font-family: 'Inter', sans-serif;
     color: white;
 }
+.label-premium{
+    margin-right: -23.5vh;
+}
 input{
     border: none;
     width: 500px;
@@ -51,6 +54,13 @@ input{
 input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
+}
+.premium{
+    display: flex;
+    justify-content: space-evenly;
+}
+.input-premium{
+    margin-right: 24.5vh;
 }
 .mensagem-login{
     display: flex;
